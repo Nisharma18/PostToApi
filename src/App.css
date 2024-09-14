@@ -1,42 +1,86 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Main container for the form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw; /* Full width of the viewport */
+  background-color: #f7f8fa;
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Page title */
+h1 {
+  color: #222; /* Black-ish text color */
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Form styling */
+.api-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Limits form width to 600px */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Input field styling */
+.api-form input {
+  width: 100%; /* Full width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #000; /* Black text */
 }
 
-.card {
-  padding: 2em;
+/* Button styling */
+.api-form button {
+  width: 100%; /* Full width */
+  padding: 10px;
+  background-color: #0a74da; /* Corporate blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+.api-form button:hover {
+  background-color: #064b9d; /* Darker blue on hover */
+}
+
+/* Response headers section */
+.headers-section {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; /* Align with form width */
+  text-align: left;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  color: #000; /* Black text */
+}
+
+.headers-section pre {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
 }

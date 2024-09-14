@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css"; // Add this line to link to the CSS file
 
 const PostToApi = () => {
   const [phonenumber, setPhoneNumber] = useState("");
@@ -33,9 +34,9 @@ const PostToApi = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h1>Post Phone Number to API</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="api-form">
         <input
           type="text"
           value={phonenumber}
@@ -47,7 +48,7 @@ const PostToApi = () => {
       </form>
 
       {headersData && (
-        <div>
+        <div className="headers-section">
           <h2>Response Headers:</h2>
           <pre>{JSON.stringify(headersData, null, 2)}</pre>
         </div>
@@ -57,5 +58,3 @@ const PostToApi = () => {
 };
 
 export default PostToApi;
-
-
